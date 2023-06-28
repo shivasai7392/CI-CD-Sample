@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'README.md'
+    paths:
+    - 'sample.py'
 
 permissions:
   id-token: write
@@ -27,5 +27,4 @@ jobs:
           python sample.py
 
       - name: Style code
-        run: |
-          python sample.py
+        run: python sample.py
