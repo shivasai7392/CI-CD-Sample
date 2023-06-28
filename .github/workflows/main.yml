@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Virtual env creation
-        run: python -m venv venv
+        run: python -m venv myvenv
 
       - name: Virtual env activation
-        run: . venv\Scripts\activate
+        run: . myvenv\Scripts\activate
 
       - name: installing requirements
         run: pip install -r requirements.txt
