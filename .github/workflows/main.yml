@@ -1,4 +1,4 @@
-name: workflow
+name: run sample.py
 
 on:
   push:
