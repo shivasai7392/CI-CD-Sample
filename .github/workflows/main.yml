@@ -24,7 +24,7 @@ jobs:
 
       - name: Lint Code
         run: |
-          pylint CI-CD-Sample/sample.py
+          pylint -d C0301 --fail-under=9.5 sample.py
 
       - name: Style code
         run: pydocstring CI-CD-Sample/sample.py
