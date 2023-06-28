@@ -6,6 +6,8 @@ on:
       - main
     paths-ignore:
       - 'README.md'
+    paths:
+      - 'sample.py'
 
 permissions:
   id-token: write
@@ -23,7 +25,7 @@ jobs:
           pip install pydocstyle
 
       - name: Lint Code
-        run: pylint */sample.py
+        run: pylint sample.py
 
       - name: Style code
         run: pydocstyle sample.py
