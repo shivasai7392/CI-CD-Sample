@@ -23,7 +23,9 @@ jobs:
           pip install pydocstyle
 
       - name: Lint Code
-        run: python sample.py
+        run: |
+          python sample.py
 
       - name: Style code
-        run: python sample.py
+        run: |
+          python sample.py
