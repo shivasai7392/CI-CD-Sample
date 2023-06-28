@@ -1,0 +1,30 @@
+image: "python 3.11"
+
+before_script:
+  - python --version
+  - python -m venv venv
+  - . venv\Scripts\activate
+  - python -m pip install --upgrade pip
+  - pip install -r requirements.txt
+  - pip install pylint
+  - pip install pydocstyle
+
+stages:
+  - linting
+  - styling
+
+pylint:
+  stage: linting
+  script:
+    - pylint -d C0301 --fail-under=9.5 src/*.py
+  only:
+    - pushes
+    - merge_requests
+
+pydocstyle:
+  stage: styling
+  script:
+    - pydocstyle src/
+  only:
+    - pushes
+    - merge_requests
