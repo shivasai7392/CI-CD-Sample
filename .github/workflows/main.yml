@@ -2,10 +2,10 @@ name: workflow
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
     paths:
-      - 'sample.py'
+
+    - 'sample.py'
 
 permissions:
   id-token: write
