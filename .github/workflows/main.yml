@@ -2,10 +2,10 @@ name: workflow
 
 on:
   push:
-    branches: [ main ]
-    paths:
-
-    - 'sample.py'
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
 
 permissions:
   id-token: write
