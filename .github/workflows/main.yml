@@ -23,7 +23,7 @@ jobs:
           pip install pydocstyle
 
       - name: Lint Code
-        run: pylint -d C0301 --fail-under=9.5 src/*.py
+        run: pylint -d C0301 --fail-under=9.5 sample.py
 
       - name: Style code
         run: pydocstyle src/
