@@ -4,9 +4,8 @@ on:
   push:
     branches:
       - main
-    paths:
+    paths-ignore:
       - 'README.md'
-      - 'sample.py'
 
 permissions:
   id-token: write
