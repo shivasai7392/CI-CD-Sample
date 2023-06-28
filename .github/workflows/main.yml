@@ -23,8 +23,7 @@ jobs:
           pip install pydocstyle
 
       - name: Lint Code
-        run: |
-          pylint sample.py
+        run: pylint sample.py
 
       - name: Style code
         run: pydocstring sample.py
