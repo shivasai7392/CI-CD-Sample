@@ -16,6 +16,21 @@ jobs:
     name: linting and styling
     runs-on: ubuntu-latest
     steps:
+      - name: Virtual env creation
+        run: python -m venv venv
+
+      - name: Virtual env activation
+        run: . venv\Scripts\activate
+
+      - name: installing requirements
+        run: pip install -r requirements.txt
+
+      - name: pylint install
+        run: pip install pylint
+
+      - name: pydocstyle install
+        run: pip install pydocstyle
+
       - name: Lint Code
         run: pylint -d C0301 --fail-under=9.5 src/*.py
 
