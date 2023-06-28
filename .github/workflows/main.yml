@@ -24,6 +24,7 @@ jobs:
 
       - name: Lint Code
         run: |
+          ls
           pylint sample.py
 
       - name: Style code
