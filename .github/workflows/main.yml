@@ -24,8 +24,7 @@ jobs:
 
       - name: Lint Code
         run: |
-          ls
-          pylint sample.py
+          pylint ./sample.py
 
       - name: Style code
         run: pydocstring CI-CD-Sample/sample.py
