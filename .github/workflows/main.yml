@@ -16,15 +16,6 @@ jobs:
     name: linting and styling
     runs-on: ubuntu-latest
     steps:
-      - name : install
-        run : |
-          python --version
-          python -m venv venv
-          venv\Scripts\activate
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pylint
-          pip install pydocstyle
       - name: Lint Code
         run: pylint -d C0301 --fail-under=9.5 src/*.py
 
