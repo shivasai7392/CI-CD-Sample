@@ -1,3 +1,5 @@
+name: workflow1
+
 image: "python 3.11"
 
 before_script:
