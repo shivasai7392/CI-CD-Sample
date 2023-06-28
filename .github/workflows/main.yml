@@ -21,6 +21,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint
           pip install pydocstyle
+          pip install -e .
 
       - name: Lint Code
         run: pylint -d C0301 --fail-under=9.5 sample.py
