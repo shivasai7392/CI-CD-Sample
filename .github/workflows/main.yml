@@ -1,4 +1,4 @@
-name: run sample.py
+name: workflow
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
           pip install pydocstyle
 
       - name: Lint Code
-        run: pylint sample.py
+        run: python sample.py
 
       - name: Style code
-        run: pydocstyle sample.py
+        run: python sample.py
